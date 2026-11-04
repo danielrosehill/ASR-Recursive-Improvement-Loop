@@ -1,5 +1,13 @@
 # ASR Recursive Improvement Loop
 
+[![Idea Documentation](https://img.shields.io/badge/Idea-Documentation-123f5c)](https://github.com/danielrosehill/ASR-Recursive-Improvement-Loop)
+[![Fine-Tuning](https://img.shields.io/badge/Topic-Fine--Tuning-2f7a86)](#method-1-mine-your-own-transcript-history)
+[![ASR](https://img.shields.io/badge/Domain-ASR-2f7a86)](#the-starting-point)
+[![Parakeet](https://img.shields.io/badge/Model-Parakeet-76b900)](https://huggingface.co/nvidia/parakeet-tdt-0.6b-v2)
+[![Claude Code Plugin](https://img.shields.io/badge/Claude%20Code-Plugin-d97757)](#use-it-yourself)
+[![Release](https://img.shields.io/github/v/release/danielrosehill/ASR-Recursive-Improvement-Loop?label=Release&color=b98a2a)](https://github.com/danielrosehill/ASR-Recursive-Improvement-Loop/releases/latest)
+[![PDF](https://img.shields.io/badge/Read-PDF-b98a2a)](pdf/ASR-Recursive-Improvement-Loop.pdf)
+
 A playbook for improving a personal speech-to-text model by using it every day and training on what it gets wrong.
 
 It comes from fine-tuning NVIDIA Parakeet for English-Hebrew code-switching, tech vocabulary and a few personal dictation preferences. The results have been encouraging, and the method does not depend on Parakeet or on Hebrew. It needs a model you can retrain, an app that keeps a transcript history, and a person willing to answer a short list of questions.
@@ -55,6 +63,10 @@ The two methods cover different gaps. Method 1 finds the unknown unknowns in rea
 - **Record the model version on every transcript.** Without it you cannot tell which version fixed what.
 - **Hold out a test set.** Keep it term-disjoint from training, and use it for periodic benchmarks, because daily history reading is a hint and not a measurement.
 
+## Current status
+
+As of 2026-11-04 the method is in daily use, and parts of it are still being built. Graded challenge-sentence takes have not been published yet, the human gate records grades but per the project docs does not yet decide what is trained on, failing terms are fed back by hand, and incremental runs publish without an evaluation step. Details are in the [implementation notes](docs/hebrish-implementation.md#known-gaps).
+
 ## Use it yourself
 
 This repo is also a Claude Code plugin with one skill, [`asr-recursive-improvement-loop`](skills/asr-recursive-improvement-loop/SKILL.md), which walks an agent through the review for any ASR project:
@@ -73,4 +85,5 @@ The skill is a plain Markdown file, so it can also be read by other agents or fo
 | [`docs/hebrish-implementation.md`](docs/hebrish-implementation.md) | How the playbook maps onto the real Hebrish tooling, and its known gaps |
 | [`samples/`](samples/) | A few rows of each dataset |
 | [`skills/`](skills/) | The agent skill |
+| [`pdf/`](pdf/ASR-Recursive-Improvement-Loop.pdf) | The playbook as a PDF, with its Typst source |
 | `docs/diagrams/` | The diagrams, generated with Nano Banana 2 |
