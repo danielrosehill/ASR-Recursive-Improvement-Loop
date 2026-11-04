@@ -8,6 +8,8 @@
 [![Release](https://img.shields.io/github/v/release/danielrosehill/ASR-Recursive-Improvement-Loop?label=Release&color=b98a2a)](https://github.com/danielrosehill/ASR-Recursive-Improvement-Loop/releases/latest)
 [![PDF](https://img.shields.io/badge/Read-PDF-b98a2a)](pdf/ASR-Recursive-Improvement-Loop.pdf)
 
+**Write-up:** [Improving a personal ASR model by using it every day](https://blog.danielrosehill.com/posts/improve-personal-asr-model-transcript-history-fine-tuning-2o8hdi/)
+
 A playbook for improving a personal speech-to-text model by using it every day and training on what it gets wrong.
 
 It comes from fine-tuning NVIDIA Parakeet for English-Hebrew code-switching, tech vocabulary and a few personal dictation preferences. The results have been encouraging, and the method does not depend on Parakeet or on Hebrew. It needs a model you can retrain, an app that keeps a transcript history, and a person willing to answer a short list of questions.
