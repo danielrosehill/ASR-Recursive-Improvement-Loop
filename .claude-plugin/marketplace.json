@@ -1,0 +1,11 @@
+{
+  "name": "asr-recursive-improvement-loop",
+  "owner": { "name": "Daniel Rosehill" },
+  "plugins": [
+    {
+      "name": "asr-recursive-improvement-loop",
+      "source": "./",
+      "description": "Improve a personal speech-to-text model from its own transcript history."
+    }
+  ]
+}

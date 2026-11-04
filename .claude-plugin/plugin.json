@@ -1,0 +1,7 @@
+{
+  "name": "asr-recursive-improvement-loop",
+  "description": "One skill for improving a personal speech-to-text model from its own transcript history: flag mistranscriptions, confirm them with the user, and prepare targeted training data.",
+  "author": { "name": "Daniel Rosehill" },
+  "repository": "https://github.com/danielrosehill/ASR-Recursive-Improvement-Loop",
+  "keywords": ["asr", "speech-to-text", "fine-tuning", "dictation"]
+}
